@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{text-decoration: none; cursor: pointer;}
+
+body{
+  background-color: rgb(243, 243, 243);
+  font-family: 'Fredoka', sans-serif;
+}
+.container{
+  width: min(90%,800px);
+  margin: auto;
+}
+
+header{
+  width: 100%;
+  text-align: center;
+  background-color: rgb(209, 80, 80);
+  padding: 20px 0px 10rem;
+
+}
+
+header h1{
+  font-family: 'Poppins';
+  color: white;
+  letter-spacing: 3px;
+  font-size: 3rem;
+}
+
+/* balance */
+
+.balance{
+  margin-top: -6rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  color: white;
+  
+  
+}
+
+.card{
+  width: 100%;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.226);
+  color: black;
+  align-items: center;
+}
+.card-display-header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.card-display-header p{
+  font-size: 22px;
+}
+/* icons card header */
+.card-display-header i{
+  font-size: 35px;
+}
+.card.income  i{
+  color: rgb(134, 247, 134);
+}
+.card.outgoing  i{
+  color: rgb(247, 134, 134);
+}
+.card-display-body p{
+  font-size: 2rem;
+}
+
+/* card total */
+.card.total{
+  color: white;
+  background: green;
+}
+.card.total.loss{
+  color: white;
+  background: rgb(128, 0, 0);
+}
+
+/* section transactions */
+.transactions{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  overflow-x: scroll;
+}
+.button.new{
+  color: green;
+  transition: 0.3s;
+  margin-bottom: 3rem;
+}
+.button.new:hover{
+  color: rgb(11, 240, 11);
+}
+/* table */
+
+.transactions-table{
+  margin-top: 15px;
+  border-spacing: 0 0.5rem;
+  color: #969cb3;
+  width: 100%;
+}
+.transactions-table tbody tr:hover {
+  color: #474a55;
+}
+.transactions-table th,.transactions-table td{
+    background: white;
+    padding: 1rem 2rem;
+    font-weight: normal;
+    text-align: left;
+}
+
+.transactions-table i{
+  cursor: pointer;
+  
+  font-size: 1.4rem;
+  color: rgba(255, 0, 0, 0.664);
+}
+
+.transactions-table .incomes{
+  color: green;
+}
+.transactions-table .expenses{
+  color: red;
+}
+/* modal */
+.modal-overflow{
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: rgba(68, 68, 68, 0.452);
+  display: none;
+  z-index: 5;
+  position: fixed;
+  
+}
+.modal{
+  
+  padding: 30px;
+  background: rgb(243, 243, 243);
+  border-radius: 5px;
+}
+.active{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+/* form */
+.form{
+  max-width: 650px;
+  min-width: 300px;
+  width: 100%;
+  
+  
+}
+.form fieldset{
+  border: none;
+}
+.form fieldset legend{
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  margin-bottom: 20px;
+}
+.form input{
+  border: none;
+  width: 100%;
+  height: 35px;
+  padding: 0px 10px;
+  outline: none;
+}
+.form .input-container{
+  margin-bottom: 10px;
+}
+.form .input-container p{
+  color: grey;
+  font-size: 12px;
+}
+
+.form .button-container{
+  display: flex;
+  gap: 20px;
+}
+.btn{
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  border-radius: 5px;
+}
+.btn-cancel{
+  border: 2px solid rgb(247, 134, 134);
+
+  color: rgb(247, 134, 134);
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+.btn-cancel:hover{
+  background: rgb(247, 134, 134);
+  color: white;
+}
+.btn-successful{
+  font-weight: bold;
+  background: green;
+  color: white;
+  transition: 0.3s ease;
+}
+.btn-successful:hover{
+  background: rgb(1, 155, 1);
+}
+
+
+@media (max-width: 800px) {
+  .balance{
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
